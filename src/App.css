@@ -1,0 +1,288 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Maven Pro", sans-serif;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 60px 40px;
+}
+
+h2 {
+  color: #004d7a;
+}
+
+a {
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #00796b;
+}
+
+/* headr */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #004d7a;
+  color: white;
+}
+
+.header h1 {
+  margin-bottom: 10px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* biogrgrafia */
+.biografia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px;
+}
+
+.biografia-candidatoImage {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.biografia-text {
+  text-align: left;
+}
+
+.biografia-text h2 {
+  margin-bottom: 10px;
+}
+
+/* propostsa */
+.propostas {
+  padding: 20px;
+}
+
+.propostas h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.propostas-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.propostas-card {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+}
+
+.propostas-card-image {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.propostas-card h3 {
+  margin: 10px 0;
+}
+
+.propostas-card p {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.outras-propostas {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.outras-propostas h2 {
+  text-align: center;
+  color: #004d7a;
+  margin-bottom: 15px;
+}
+
+.outras-propostas-list {
+  list-style: none;
+  padding: 0;
+}
+
+.outras-propostas-list li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.outras-propostas-list li:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.icon {
+  margin-right: 10px;
+  font-size: 1.5em;
+}
+
+.text {
+  flex: 1;
+}
+
+/* agenda */
+.agenda {
+  padding: 20px;
+}
+
+.agenda h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.eventos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.eventos-card {
+  background-color: #e0f7fa;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.data {
+  font-weight: bold;
+  color: #00796b;
+}
+
+.descricao {
+  margin-top: 5px;
+}
+
+/* footer */
+.footer {
+  background-color: #004d7a;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.5em;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #00bcd4;
+}
+
+.contact-info {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .menu {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .biografia {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .biografia-candidatoImage {
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+
+  .biografia-text {
+    flex: 1;
+  }
+
+  .propostas-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .eventos-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .eventos-card {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .social-links {
+    margin-bottom: 0;
+  }
+
+  .contact-info {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .propostas-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .eventos-card {
+    flex: 1 1 calc(33.333% - 20px);
+  }
+}
