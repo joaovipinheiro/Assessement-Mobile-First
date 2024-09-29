@@ -1,0 +1,50 @@
+.agenda {
+  padding: 20px;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.agenda h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #004d7a;
+}
+
+.eventosContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.eventosCard {
+  background-color: #e0f7fa;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.data {
+  font-weight: bold;
+  color: #00796b;
+}
+
+.descricao {
+  margin-top: 5px;
+}
+
+@media (min-width: 768px) {
+  .eventosContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .eventosCard {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .eventosCard {
+    flex: 1 1 calc(33.333% - 20px);
+  }
+}

@@ -1,0 +1,43 @@
+.biografia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 30px;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.candidatoImage {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.text {
+  text-align: left;
+  max-width: 800px;
+}
+
+.text h2 {
+  margin-bottom: 10px;
+  color: #004d7a;
+}
+
+@media (min-width: 768px) {
+  .biografia {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    padding: 60px 40px;
+  }
+
+  .candidatoImage {
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+
+  .text {
+    flex: 1;
+  }
+}
