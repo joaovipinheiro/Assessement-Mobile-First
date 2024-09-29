@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./Agenda.module.css";
 
 const eventos = [
   { id: 1, data: "10/11/2024", descricao: "Comício na Praça Central" },
@@ -10,13 +11,13 @@ const eventos = [
 
 const Agenda = () => {
   return (
-    <section id="agenda" className="agenda">
+    <section id="agenda" className={styles.agenda}>
       <h2>Agenda da Campanha</h2>
-      <div className="eventos-container">
+      <div className={styles.eventosContainer}>
         {eventos.map((evento) => (
-          <div key={evento.id} className="eventos-card">
-            <p className="data">{evento.data}</p>
-            <p className="descricao">{evento.descricao}</p>
+          <div key={evento.id} className={styles.eventosCard}>
+            <p className={styles.data}>{evento.data}</p>
+            <p className={styles.descricao}>{evento.descricao}</p>
           </div>
         ))}
       </div>

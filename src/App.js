@@ -4,13 +4,12 @@ import Biografia from "./components/Biografia";
 import Propostas from "./components/Propostas";
 import Agenda from "./components/Agenda";
 import Footer from "./components/Footer";
-// import MenuMobile from "./components/MenuMobile"; lembrar!!
 
-import "./App.css";
+import styles from "./App.module.css";
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.App}>
       <Header />
       <Biografia />
       <Propostas />

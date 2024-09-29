@@ -1,1 +1,79 @@
 @import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Maven Pro", sans-serif;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+section {
+  padding: 60px 40px;
+}
+
+h2 {
+  color: #004d7a;
+}
+
+a {
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #00796b;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #ffffff;
+  }
+
+  .header,
+  .footer {
+    background-color: #1f1f1f;
+  }
+
+  .propostasCard {
+    background-color: #2c2c2c;
+    color: #ffffff;
+  }
+
+  .biografia {
+    background-color: #1f1f1f;
+    color: #ffffff;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .header,
+  .footer {
+    background-color: #004d7a;
+  }
+
+  .propostasCard {
+    background-color: #f5f5f5;
+    color: #000000;
+  }
+
+  .biografia {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

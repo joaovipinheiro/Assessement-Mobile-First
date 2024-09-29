@@ -1,9 +1,9 @@
 import React from "react";
-
 import proposta1 from "../assets/proposta1.png";
 import proposta2 from "../assets/proposta2.png";
 import proposta3 from "../assets/proposta3.png";
 import proposta4 from "../assets/proposta4.png";
+import styles from "./Propostas.module.css";
 
 const propostas = [
   {
@@ -36,49 +36,39 @@ const propostas = [
 ];
 
 const outrasPropostas = [
-  "Habitação Popular",
-  "Sustentabilidade Ambiental",
-  "Cultura e Lazer",
-  "Desenvolvimento Econômico",
-  "Inclusão Social",
+  { icon: "🏠", text: "Habitação Popular" },
+  { icon: "🌱", text: "Sustentabilidade Ambiental" },
+  { icon: "🎭", text: "Cultura e Lazer" },
+  { icon: "💼", text: "Desenvolvimento Econômico" },
+  { icon: "🤝", text: "Inclusão Social" },
 ];
 
 const Propostas = () => {
   return (
-    <section id="propostas" className="propostas">
+    <section id="propostas" className={styles.propostas}>
       <h2>Propostas</h2>
-      <div className="propostas-container">
+      <div className={styles.propostasContainer}>
         {propostas.map((proposta) => (
-          <div key={proposta.id} className="propostas-card">
+          <div key={proposta.id} className={styles.propostasCard}>
             <img
               src={proposta.imagem}
               alt={proposta.titulo}
-              className="propostas-card-image"
+              className={styles.propostasCardImage}
             />
             <h3>{proposta.titulo}</h3>
             <p>{proposta.descricao}</p>
           </div>
         ))}
       </div>
-      <div className="outras-propostas">
-        {" "}
-        {/* Material Icons não funfa por algum motivo */}
+      <div className={styles.outrasPropostas}>
         <h2>Outras Propostas</h2>
-        <ul className="outras-propostas-list">
-          <li>
-            <span className="icon">🌱</span>
-            <span className="text">Proposta sobre meio ambiente</span>
-          </li>
-          <li>
-            <span className="icon">🏫</span>
-            <span className="text">Proposta de educação para todos</span>
-          </li>
-          <li>
-            <span className="icon">🚧</span>
-            <span className="text">
-              Proposta de melhorias em infraestrutura
-            </span>
-          </li>
+        <ul className={styles.outrasPropostasList}>
+          {outrasPropostas.map((proposta, index) => (
+            <li key={index}>
+              <span className={styles.icon}>{proposta.icon}</span>
+              <span className={styles.text}>{proposta.text}</span>
+            </li>
+          ))}
         </ul>
       </div>
     </section>
@@ -86,5 +76,3 @@ const Propostas = () => {
 };
 
 export default Propostas;
-
-// tem que terminar
